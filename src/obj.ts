@@ -3,7 +3,7 @@ import { Point3D } from './point3D.js';
 
 // Contains 3D object data
 export class Obj {
-   rho:number; theta:number = 0.3; phi:number = 1.3; d:number; objSize:number;
+   rho:number; theta:number = -0.8; phi:number = 1; d:number; objSize:number;
    v11:number; v12:number; v13:number; v21:number; v22:number; v23:number; v32:number; v33:number; v43:number;
                      // Elements of viewing matrix V
    w:Point3D[];     // World coordinates
@@ -14,15 +14,15 @@ export class Obj {
       this.w = new Array<Point3D>(8);
       this.vScr = new Array<Point2D>(8);
       // Bottom surface:
-      this.w[0] = new Point3D( 1, -1, -1);
-      this.w[1] = new Point3D( 1,   1, -1);
-      this.w[2] = new Point3D(-1,   1, -1);
-      this.w[3] = new Point3D(-1, -1, -1);
-      // Top surface:
-      this.w[4] = new Point3D(-3, -1, 1);
-      this.w[5] = new Point3D(3.2, 1, 2);
-      this.w[6] = new Point3D(3.1, 1, 2);
-      this.w[7] = new Point3D(-3, -1, 1);
+      this.w[0] = new Point3D(0.3, -1, -1);
+      this.w[1] = new Point3D(0.3, 1, -1);
+      this.w[2] = new Point3D(-0.3, 1, -1);
+      this.w[3] = new Point3D(-0.3, -1, -1);
+        // Top surface:
+      this.w[4] = new Point3D(0.3, -1, 1);
+      this.w[5] = new Point3D(0.3, 1, 1);
+      this.w[6] = new Point3D(-0.3, 1, 1);
+      this.w[7] = new Point3D(-0.3, -1, 1);
 
       this.objSize = Math.sqrt (12);
          // = sqrt(2  * 2 + 2 * 2 + 2 * 2)

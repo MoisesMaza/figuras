@@ -3,21 +3,21 @@ import { Point3D } from './point3D.js';
 // Contains 3D object data
 export class Obj {
     constructor() {
-        this.theta = 0.3;
-        this.phi = 1.3;
+        this.theta = -0.8;
+        this.phi = 1;
         //w = new Point3D[8];
         this.w = new Array(8);
         this.vScr = new Array(8);
         // Bottom surface:
-        this.w[0] = new Point3D(1, -1, -1);
-        this.w[1] = new Point3D(1, 1, -1);
-        this.w[2] = new Point3D(-1, 1, -1);
-        this.w[3] = new Point3D(-1, -1, -1);
+        this.w[0] = new Point3D(0.3, -1, -1);
+        this.w[1] = new Point3D(0.3, 1, -1);
+        this.w[2] = new Point3D(-0.3, 1, -1);
+        this.w[3] = new Point3D(-0.3, -1, -1);
         // Top surface:
-        this.w[4] = new Point3D(-3, -1, 1);
-        this.w[5] = new Point3D(3.2, 1, 2);
-        this.w[6] = new Point3D(3.1, 1, 2);
-        this.w[7] = new Point3D(-3, -1, 1);
+        this.w[4] = new Point3D(0.3, -1, 1);
+        this.w[5] = new Point3D(0.3, 1, 1);
+        this.w[6] = new Point3D(-0.3, 1, 1);
+        this.w[7] = new Point3D(-0.3, -1, 1);
         this.objSize = Math.sqrt(12);
         // = sqrt(2  * 2 + 2 * 2 + 2 * 2)
         // = distance between two opposite vertices.
